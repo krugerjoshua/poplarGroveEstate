@@ -16,7 +16,7 @@
                 />
             </div>
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="navMenu">
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT US</a></li>
                     <li><a href="">DEVELOPMENT</a></li>
@@ -24,6 +24,7 @@
                     <li><a href="">CONTACT US</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" id="menuToggle">☰</div>
         </header>
         <section class="hero">
             <img
@@ -36,15 +37,97 @@
                 <p>Tailored to Your Independent Lifestyle</p>
             </div>
             <div class="scroll-indicator">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></span>
+                <span><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                        />
+                    </svg>
+                </span>
             </div>
         </section>
         <section class="property-cards">
             <div class="phase-header">
-                <h2>Exclusive Phase 1<br>Now Selling</h2>
-                <p>House Plots From<br><strong>R1,012,500 - R3,160,000</strong></p>
+                <h2>Exclusive Phase 1<br />Now Selling</h2>
+                <p>
+                    House Plots From<br /><strong
+                        >R1,012,500 - R3,160,000</strong
+                    >
+                </p>
                 <button class="enquire-btn">ENQUIRE NOW</button>
+            </div>
+            <div class="cards-section">
+                <div class="property-card">
+                    <img src="assets/images/2 bed square.jpg" alt="" />
+                    <div class="card-content">
+                        <h3>2 Bed Square Plans</h3>
+                        <p><strong>19 Units Available</strong></p>
+                        <p>
+                            Plots 2-9; 24-32 offers you 2 Bed Square Shaped Plan
+                            Houses
+                        </p>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <img
+                        src="assets/images/2 bed L shaped.png"
+                        alt="House Type 2"
+                    />
+                    <div class="card-content">
+                        <h3>2 Bed L-Shaped Plans</h3>
+                        <p><strong>3 units available</strong></p>
+                        <p>Plots 10-12 offers you 2 Bed L-Shaped Plan Houses</p>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <img src="assets/images/6 x 3 bed.png" alt="House Type 2" />
+                    <div class="card-content">
+                        <h3>6 x 3 Bed Plans</h3>
+                        <p><strong>3 units available</strong></p>
+                        <p>Plots 10-12 offers you 2 Bed L-Shaped Plan Houses</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="virtual-walk">
+            <div class="walk-content">
+                <h2>Virtual Walk<br>Through</br></h2>
+                <p>
+                    Look at Caledon and the area (Google Maps image) <br>
+                    Showing what's in the area
+                </p>
+                <button class="walk-btn">TAKE A LOOK</button>
+            </div>
+        </section>
+        <section class="phase-map">
+            <div class="phase-text">
+                <h2>Exclusive Phase 1<br>Now Selling</h2>
+                <p>Plots Sold – no. 5, 12<br>
+                    Plots Reserved – no. 8, 11, 15, 17, 18, 20<br>
+                    Available – no. 2, 3, 4, 6, 7, 9
+                </p>
+                <button class="enquire-btn">ENQUIRE NOW</button>
+            </div>
+            <div class="phase-image">
+                <img src="assets/images/plotNumberMap.png" alt="Estate Plot Map">
             </div>
         </section>
     </body>
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("open");
+            menuToggle.classList.toggle("open");
+ 
+            // Change icon
+            if (menuToggle.classList.contains("open")) {
+                menuToggle.textContent = "✖"; // X icon
+            } else {
+                menuToggle.textContent = "☰"; // Hamburger
+            }
+        });
+    </script>
 </html>
