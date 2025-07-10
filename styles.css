@@ -326,45 +326,81 @@ body {
 }
 
 .phase-map {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-    background-color: #fff;
-    gap: 40px;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.phase-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center both blocks together */
+  align-items: center;
+  gap: 40px;
 }
 
 .phase-text {
-    flex: 1;
-    min-width: 280px;
-    max-width: 400px;
-    padding: 100px;
-    margin: 0 auto;
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: center; /* center text inside */
 }
 
 .phase-text h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .phase-text p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.5;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .phase-image {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-    padding: 20px;
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: center;
 }
 
 .phase-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
+
+.enquire-btn {
+  padding: 10px 25px;
+  border: none;
+  background-color: #2f2f2f;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enquire-btn:hover {
+  background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .phase-inner {
+    flex-direction: column;
+  }
+
+  .phase-text,
+  .phase-image {
+    max-width: 100%;
+  }
+
+  .phase-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .phase-text p {
+    font-size: 0.95rem;
+  }
+}
+
