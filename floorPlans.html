@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poplar Grove Estate</title>
+    <link rel="stylesheet" href="/css/aboutUs.css" />
+</head>
+<body>
+    <header class="navbar">
+            <div class="logo">
+                <img
+                    src="assets/images/image.png"
+                    alt="Poplar Grove Logo"
+                    class="logo-img"
+                />
+            </div>
+            <nav>
+                <ul class="nav-links" id="navMenu">
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="aboutUs.html">ABOUT US</a></li>
+                    <li><a href="development.html">DEVELOPMENT</a></li>
+                    <li><a href="floorPlans.html"><u>FLOOR PLANS</u></a></li>
+                    <li><a href="contactUs.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        </header>
+</body>
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("open");
+            menuToggle.classList.toggle("open");
+ 
+            // Change icon
+            if (menuToggle.classList.contains("open")) {
+                menuToggle.textContent = "✖"; // X icon
+            } else {
+                menuToggle.textContent = "☰"; // Hamburger
+            }
+        });
+    </script>
+</html>
