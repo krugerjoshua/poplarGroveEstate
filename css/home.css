@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,30 @@ body {
     background-color: #fff;
 }
 
+/* Utilities */
+.btn {
+    display: inline-block;
+    width: 120px;
+    height: 29px;
+    border: none;
+    border-radius: 15px;
+    font-size: x-small;
+    margin-top: 14px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 29px;
+}
+
+.btn-dark {
+    background: #2f2f2f;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background: #000;
+}
+
+/* Navbar */
 .navbar {
     position: absolute;
     top: 0;
@@ -36,6 +61,15 @@ body {
         rgba(255, 255, 255, 1),
         rgba(255, 255, 255, 0)
     );
+}
+
+.navbar a {
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  border-bottom-color: black;
 }
 
 .logo {
@@ -68,35 +102,14 @@ body {
     gap: 30px;
 }
 
-.nav-links ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    font-size: 14px;
-}
-
 .nav-links li a {
     text-decoration: none;
-    color: black;
+    color: #000;
     font-weight: 600;
     font-size: 14px;
 }
 
-.nav-links li a:hover {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-    /* font-size: 1rem; */
-    text-decoration: underline;
-}
-
-/* Mobile menu button hidden by default */
+/* Mobile Menu */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -105,7 +118,11 @@ body {
     transition: transform 0.3s;
 }
 
-/* Responsive styles */
+.menu-toggle.open {
+    transform: rotate(90deg);
+}
+
+/* Responsive Navbar */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -113,10 +130,6 @@ body {
         top: 20px;
         right: 20px;
         z-index: 1001;
-        font-size: 28px;
-        cursor: pointer;
-        user-select: none;
-        transition: transform 0.3s;
     }
 
     .nav-links {
@@ -140,10 +153,7 @@ body {
     }
 }
 
-.menu-toggle.open {
-    transform: rotate(90deg);
-}
-
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
@@ -155,11 +165,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgb(255, 255, 255),
-        rgba(237, 237, 237, 0.4)
-    );
+    background: linear-gradient(to bottom, #fff, rgba(237, 237, 237, 0.4));
     z-index: 1;
 }
 
@@ -167,7 +173,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -207,10 +212,11 @@ body {
     opacity: 0.8;
 }
 
+/* Property Cards */
 .property-cards {
     padding: 80px 20px;
     text-align: center;
-    background-color: #fff;
+    background: #fff;
     color: #2f2f2f;
 }
 
@@ -218,21 +224,6 @@ body {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 10px;
-}
-
-.enquire-btn {
-    width: 120px;
-    height: 29px;
-    border: none;
-    background-color: #2f2f2f;
-    color: #fff;
-    border-radius: 15px;
-    font-size: x-small;
-    margin-top: 14px;
-}
-
-.enquire-btn:hover {
-    background-color: #000;
 }
 
 .cards-section {
@@ -245,7 +236,7 @@ body {
 
 .property-card {
     width: 300px;
-    background: white;
+    background: #fff;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
@@ -292,8 +283,9 @@ body {
     }
 }
 
+/* Virtual Walk */
 .virtual-walk {
-    background-color: #ddd;
+    background: #ddd;
     padding: 100px 20px;
     text-align: center;
 }
@@ -310,24 +302,10 @@ body {
     margin-bottom: 25px;
 }
 
-.walk-btn {
-    width: 120px;
-    height: 29px;
-    border: none;
-    background-color: #2f2f2f;
-    color: #fff;
-    border-radius: 15px;
-    font-size: x-small;
-    margin-top: 14px;
-}
-
-.walk-btn:hover {
-    background-color: #000;
-}
-
+/* Phase Map */
 .phase-map {
     padding: 80px 20px;
-    background-color: #fff;
+    background: #fff;
 }
 
 .phase-inner {
@@ -389,18 +367,14 @@ body {
     }
 }
 
+/* Phase One */
 .phase-one-inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    background-color: #ddd;
-}
-
-.phase-text {
-    flex: 1 1 300px;
-    text-align: center;
+    background: #ddd;
 }
 
 .phase-images {
@@ -437,9 +411,10 @@ body {
     }
 }
 
+/* Video Section */
 .video-section {
     width: 100%;
-    background-color: #ddd;
+    background: #ddd;
     padding: 2rem 0;
 }
 
@@ -457,9 +432,10 @@ body {
     display: block;
 }
 
+/* Visit Section */
 .visit-section {
     padding: 60px 20px;
-    background-color: white;
+    background: #fff;
 }
 
 .visit-container {
@@ -504,14 +480,9 @@ body {
     border-radius: 4px;
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
     .visit-container {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .visit-text {
         text-align: center;
     }
 
@@ -520,51 +491,47 @@ body {
     }
 }
 
+/* Footer */
 .footer {
-  background-color: #e6e6e6;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
+    background: #e6e6e6;
+    padding: 40px 20px 20px;
+    font-family: Arial, sans-serif;
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-.footer-logo {
-  flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
 }
 
 .footer-logo img {
-  width: 140px;
-  height: auto;
+    width: 140px;
+    height: auto;
 }
 
 .footer-info {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .footer-section {
-  min-width: 150px;
+    min-width: 150px;
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  .footer-info {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
