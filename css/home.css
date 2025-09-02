@@ -474,9 +474,20 @@ body {
     gap: 40px;
 }
 
+.footer-container a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.829);
+}
+
+.footer-container a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.829);
+}
+
 .footer-logo img {
     width: 140px;
     height: auto;
+    gap: 10px;
+    padding-bottom: 20px;
 }
 
 .footer-info {
@@ -488,6 +499,10 @@ body {
 
 .footer-section {
     min-width: 150px;
+}
+
+.footer-section h4{
+    padding-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
