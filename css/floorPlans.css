@@ -45,11 +45,6 @@ body {
     align-items: center;
     z-index: 10;
     transition: background 0.3s;
-    /* background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0)
-    ); */
     background-color: #faf9f6;
 }
 
@@ -155,7 +150,6 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, #faf9f6, rgba(237, 237, 237, 0.4));
     z-index: 1;
 }
 
@@ -171,11 +165,11 @@ body {
 
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #000;
+    color: #ffffff;
     padding: 20px 40px;
     border-radius: 8px;
     z-index: 2;
@@ -198,4 +192,12 @@ body {
     .hero-text p {
         font-size: 1rem;
     }
+}
+
+.chooseYourPlan {
+
+}
+
+.planHeader {
+    
 }
